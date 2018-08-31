@@ -1,0 +1,15 @@
+server:
+  port: 8050
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka/
+turbine:
+  aggregator:
+    clusterConfig: SAMPLE-HYSTRIX-AGGREGATE
+  appConfig: DEPARTMENT-SERVICE, EMPLOYEE-SERVICE, ORGANIZATION-SERVICE
+#  instanceUrlSuffix: /actuator/hystrix.stream
+  
+info:
+  component: Turbine

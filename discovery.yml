@@ -1,16 +1,13 @@
+server:
+  port: 8010
+
 eureka:
+  instance:
+    hostname: localhost
   client:
-    dashboard:
-      enabled: true
     fetch-registry: false
     register-with-eureka: false
     serviceUrl:
-      defaultZone: http://localhost:8010/eureka/
-  instance:
-    hostname: localhost
-server:
-  port: 8010
-spring:
-  application:
-    name: discovery
-  profiles: default
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    dashboard:
+      enabled: true

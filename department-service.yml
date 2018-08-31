@@ -1,0 +1,20 @@
+server:
+  port: 8021
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka/
+
+spring:
+  zipkin:
+    baseUrl: http://localhost:8040/
+  sleuth:
+    sampler:
+      probability: 1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

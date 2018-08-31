@@ -1,0 +1,20 @@
+server:
+  port: 8040
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka/
+    registryFetchIntervalSeconds: 5
+
+logging:
+  level:
+    org:
+      springframework:
+        web: debug
+
+management:
+  metrics: 
+    web:
+      server:
+        auto-time-requests: false
