@@ -5,10 +5,13 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8010/eureka/
+
+applications: DEPARTMENT-SERVICE, EMPLOYEE-SERVICE, ORGANIZATION-SERVICE
+
 turbine:
   aggregator:
-    clusterConfig: SAMPLE-HYSTRIX-AGGREGATE
-  appConfig: DEPARTMENT-SERVICE, EMPLOYEE-SERVICE, ORGANIZATION-SERVICE
+    clusterConfig: ${applications}
+  appConfig: ${applications}
 #  instanceUrlSuffix: /actuator/hystrix.stream
   
 info:
