@@ -6,7 +6,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8010/eureka/
 
-applications: DEPARTMENT-SERVICE, EMPLOYEE-SERVICE, ORGANIZATION-SERVICE
+#applications: DEPARTMENT-SERVICE, EMPLOYEE-SERVICE, ORGANIZATION-SERVICE
+applications: SAMPLE-HYSTRIX-AGGREGATE
 
 turbine:
   aggregator:
